@@ -25,17 +25,15 @@ export const {increment, decrement, addStep} = counterSlice.actions;
 /**
  * function to add a dynamic value to counter asynchronously.
  * @param {Number} step (OPTIONAL: default value 1)
- * 
+ *
  * NOTE: setTimeout is used only for demo of asynchronous feature. Any side-effect like API calls can be used here.
  * setTimeout will be delayed and may take longer than specified time when debugger is active. Turning the debug mode off will fix it.
  */
-export const addThunk = (step=1) => async (dispatch) => {
-  console.log("SS:: addThunk called...");
-  const response = await setTimeout(()=>{
-    console.log("SS:: addThunk Timeout called...");
+export const addThunk = (step = 1) => async dispatch => {
+  setTimeout(() => {
+    console.log('SS:: addAsync called...');
     dispatch(addStep(step));
-  },2000);
-}
-
+  }, 2000);
+};
 
 export default counterSlice.reducer;

@@ -13,7 +13,7 @@ This is a demo project for implementation of:
 ## Followed below steps:
 - npx react-native init ReduxPersist
 - cd ReduxPersist
-- Changes done for changes port in "/package.json > scripts"
+- OPTIONAL: Changes done for changes port in "/package.json > scripts". In my case, port 8081 was already in use so, I use 9001. You can skip port changes.
 
 ### Dependencies:
 1. paper (https://callstack.github.io/react-native-paper/)

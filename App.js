@@ -17,7 +17,7 @@ import {
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import {Counter} from './src/components/Counter';
 import {CounterRedux} from './src/components/CounterRedux';
-import {Startup} from './src/components/Startup';
+import {AppTitle} from './src/components/AppTitle';
 // REDUX
 import store, {persistor} from './src/redux/store';
 import {Provider as ReduxProvider} from 'react-redux';
@@ -30,7 +30,7 @@ const MainMarkup = () => (
     <StatusBar />
     <ScrollView contentInsetAdjustmentBehavior="automatic">
       <View>
-        <Startup />
+        <AppTitle />
         <Counter />
         <CounterRedux />
       </View>
