@@ -13,7 +13,7 @@ export const Person = () => {
   return (
     <>
       <View>
-        <View style={{flexDirection: 'row', margin: 5}}>
+        <View style={{margin: 5}}>
           <Text style={{color: theme.colors.primary, fontSize: 20}}>
             Person Component: {count}
           </Text>

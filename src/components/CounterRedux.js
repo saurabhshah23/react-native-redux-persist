@@ -19,47 +19,48 @@ export const CounterRedux = () => {
 
   return (
     <>
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-        }}>
-        <Text style={{color: theme.colors.primary, fontSize: 20}}>
-          CounterRedux Component: {count}
-        </Text>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => dispatch(increment())}>
-          Inc
-        </Button>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => dispatch(decrement())}>
-          Dec
-        </Button>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => dispatch(addThunk())}>
-          Add Thunk
-        </Button>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => dispatch(addThunk(10))}>
-          Add Thunk 10
-        </Button>
+      <View>
+        <View style={{margin: 5}}>
+          <Text style={{color: theme.colors.primary, fontSize: 20}}>
+            CounterRedux Component: {count}
+          </Text>
+        </View>
+        <View style={{flexDirection: 'row', margin: 5}}>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => dispatch(increment())}>
+            Inc
+          </Button>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => dispatch(decrement())}>
+            Dec
+          </Button>
+        </View>
+        <View style={{flexDirection: 'row', margin: 5}}>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => dispatch(addThunk())}>
+            Add Thunk
+          </Button>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => dispatch(addThunk(10))}>
+            Add Thunk 10
+          </Button>
+        </View>
       </View>
     </>
   );

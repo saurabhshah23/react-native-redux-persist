@@ -11,31 +11,30 @@ export const Counter = () => {
   };
   return (
     <>
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-        }}>
-        <Text style={{color: theme.colors.primary, fontSize: 20}}>
-          Counter Component: {count}
-        </Text>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => addCount(1)}>
-          +
-        </Button>
-        <Button
-          labelStyle={{paddingHorizontal: 20}}
-          style={{marginHorizontal: 5}}
-          compact
-          mode="contained"
-          onPress={() => addCount(-1)}>
-          -
-        </Button>
+      <View>
+        <View style={{margin: 5}}>
+          <Text style={{color: theme.colors.primary, fontSize: 20}}>
+            Counter Component: {count}
+          </Text>
+        </View>
+        <View style={{flexDirection: 'row', margin: 5}}>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => addCount(1)}>
+            +
+          </Button>
+          <Button
+            labelStyle={{paddingHorizontal: 20}}
+            style={{marginHorizontal: 5}}
+            compact
+            mode="contained"
+            onPress={() => addCount(-1)}>
+            -
+          </Button>
+        </View>
       </View>
     </>
   );
